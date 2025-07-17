@@ -27,11 +27,11 @@ int prefixSumApproach(vector<int> nums){
     vector<int>lSum(nums.size(),0);
     vector<int>rSum(nums.size(),0);
 
-    //calculating lSum array
+    //calculating lSum array (left Sum)
     for(int i=1;i<nums.size();i++){
         lSum[i] = lSum[i-1] + nums[i-1];
     }
-    //calculating lSum array
+    //calculating rSum array (right Sum)
     for(int i=nums.size()-2;i>=0;i--){
         rSum[i] = rSum[i+1] + nums[i+1];
     }

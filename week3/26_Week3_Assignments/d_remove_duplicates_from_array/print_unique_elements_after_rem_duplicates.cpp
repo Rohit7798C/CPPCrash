@@ -21,6 +21,22 @@ vector<int>printUniqueElementsOfArray(vector<int>arr){
     return arr;
 }
 
+vector<int>findUniqueElements(vector<int>nums){
+    vector<int>ans = {-1};
+    sort(nums.begin(),nums.end());
+    if(nums.empty()){
+        return ans;
+    }
+    ans.pop_back();
+    ans.push_back(nums[0]);
+    for(int i = 1;i<nums.size();i++){
+        if(nums[i]!=nums[i-1]){
+            ans.push_back(nums[i]);
+        }
+    }
+    return ans;
+}
+
 int main(){
     vector<int>arr = {0, 1, 2, 3, 0, 4, 5, 3, 2, 1};
     vector<int> ansOfUniqueElements = printUniqueElementsOfArray(arr);

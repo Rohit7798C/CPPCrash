@@ -26,6 +26,31 @@ double slidingWindow(vector<int>arr,int k){
     return maxAvg;
 }
 
+double maxSubArray(vector<int>nums,int k){
+    if(nums.empty()){
+        return -1.0;
+    }
+    if(k<=0 || k>nums.size()){
+        return 0.0;
+    }
+    int i = 0, j = k-1;
+    double sum = 0.0;
+    double maxSum = INT_MIN;
+    for(int x = i;x<=j;x++){
+        sum+=nums[x];
+    }
+    j++;
+    while(j<nums.size()){
+        sum -= nums[i];
+        i++;
+        sum += nums[j];
+        j++;
+        maxSum = max(maxSum,sum);
+    }
+    double maxAvg = maxSum/(double)k;
+    return maxAvg;
+}
+
 int main(){
     vector<int>arr = {1,12,-5,-6,50,3};
     int k = 4;

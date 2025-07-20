@@ -6,7 +6,7 @@
 using namespace std;
 
 void inplaceSort(vector<int>arr){
-    int l=0,m=0,h=0;
+    int l=0,m=0,h=n-1;
     int n = arr.size();
     while(m<=h){
         if(arr[m] == 0){

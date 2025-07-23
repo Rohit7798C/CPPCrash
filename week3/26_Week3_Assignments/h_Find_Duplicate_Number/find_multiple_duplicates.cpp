@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int findMultipleDuplicates(vector<int>arr){
+int findDuplicate(vector<int>arr){
     int n = arr.size()-1;
 
     sort(arr.begin(),arr.end());
@@ -19,7 +19,7 @@ int findMultipleDuplicates(vector<int>arr){
 
 int main(){
     vector<int>arr = {1,3,4,2,4,4,4};
-    int ans = findMultipleDuplicates(arr);
+    int ans = findDuplicate(arr);
     cout<<"The reapeated number is : "<<ans;
     return 0;
 }

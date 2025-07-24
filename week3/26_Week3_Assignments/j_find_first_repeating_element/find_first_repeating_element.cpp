@@ -37,7 +37,7 @@ int hashingMethod(vector<int>arr){
     //Iterating the hash table to check the count of each element.
     for(int i=0;i<n;i++){
         if(hash[arr[i]] >1){
-            return i+1;
+            return i;
         }
     }
     return -1;

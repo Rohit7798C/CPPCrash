@@ -11,9 +11,11 @@ void findMissingElement(vector<int>arr){
     int n = arr.size();
     for(int i=0;i<n;i++){
         int index = abs(arr[i]);
-        if(arr[index-1]>0){
-            arr[index-1] *= -1;
-            //We are taking index-1 because elements are starting from 1 but indexing of an array starts from 0;
+        if(index>=1 && index<=n){
+            if(arr[index-1]>0){
+                arr[index-1] *= -1;
+                //We are taking index-1 because elements are starting from 1 but indexing of an array starts from 0;
+            }
         }
     }
     for(int i=0;i<n;i++){

@@ -1,12 +1,14 @@
+//Q. Common element in 3 sorted arrays
 #include<iostream>
 #include<vector>
 #include<algorithm>
 #include<set>
+#include<unordered_set>
 
 using namespace std;
 
 
-//Time Complexity : O(N1) + O(N2) + O(N3)
+//Time Complexity : O(N1logN1) + O(N2logN2) + O(N3logN3)
 //Space Complexity : O(N1)
 vector<int>findAllCommonElements(vector<int>arr1,vector<int>arr2,vector<int>arr3){
     sort(arr1.begin(),arr1.end());
@@ -43,6 +45,41 @@ vector<int>findAllCommonElements(vector<int>arr1,vector<int>arr2,vector<int>arr3
     }
     return commonElements;
 }
+// The above code is not 100% correct
+// The correct code is given below
+
+vector<int>findAllCommonElementsCorrect(vector<int>&arr1, vector<int>&arr2, vector<int>&arr3){
+    sort(arr1.begin(),arr1.end());
+    sort(arr2.begin(),arr2.end());
+    sort(arr3.begin(),arr3.end());
+    int n1 = arr1.size();
+    int n2 = arr2.size();
+    int n3 = arr3.size();
+    
+    vector<int>commonElements;
+    unordered_set<int>s;
+    int i = 0, j = 0, k = 0;
+    while(i<n1 && j<n2 && k<n3){
+        if(arr1[i] == arr2[j] && arr2[j] == arr3[k]){
+            s.insert(arr1[i]);
+            i++,j++,k++;
+        }
+        else if(arr1[i]<arr2[j]){
+            i++;
+        }
+        else if(arr2[j]<arr3[k]){
+            j++;
+        }
+        else{
+            k++;
+        }
+    }
+    for(int i : s){
+        commonElements.push_back(i);
+    }
+    return commonElements;
+}
+
 
 int main(){
     vector<int>arr1;
@@ -77,11 +114,15 @@ int main(){
     }
 
     vector<int>ans = findAllCommonElements(arr1,arr2,arr3);
-    
     int n = ans.size();
     cout<<"The common elements are : ";
     for(int i=0;i<n;i++){
         cout<<ans[i]<<" ";
+    }
+    vector<int>correctAns = findAllCommonElementsCorrect(arr1,arr2,arr3);
+    cout<<"The common elements are : ";
+    for(int i=0;i<n;i++){
+        cout<<correctAns[i]<<" ";
     }
     return 0;
 }

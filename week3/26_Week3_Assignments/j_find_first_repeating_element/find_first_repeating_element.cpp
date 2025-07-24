@@ -7,6 +7,9 @@ using namespace std;
 // Time Complexity : O(N)
 // Space Complexity : O(1)
 int indexOfFirstRepeatElement(vector<int>arr){
+    if(arr.empty()){
+        return -1;
+    }
     int n = arr.size();
 
     for(int i=0;i<n;i++){

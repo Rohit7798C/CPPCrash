@@ -48,6 +48,8 @@ vector<int>findAllCommonElements(vector<int>arr1,vector<int>arr2,vector<int>arr3
 // The above code is not 100% correct
 // The correct code is given below
 
+//Time Complexity : O(N1) + O(N2) + O(N3)
+//Space Complexity : O(N1)
 vector<int>findAllCommonElementsCorrect(vector<int>&arr1, vector<int>&arr2, vector<int>&arr3){
     sort(arr1.begin(),arr1.end());
     sort(arr2.begin(),arr2.end());

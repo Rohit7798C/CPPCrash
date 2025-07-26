@@ -82,7 +82,7 @@ int main(){
     //cout<< marks.front() << endl;      //Output : 10
     
 
-    //7) back() : Accesses the first element of the vector.
+    //7) back() : Accesses the last element of the vector.
     //cout<< marks.back() << endl;      //Output : 30 , because 40 is already popped.
     
 
@@ -156,7 +156,7 @@ int main(){
     // cout<<marks.size()<<endl;               //Output : 0
 
 
-    //15) insert(iterator position, const T& value) : Inserts a new element before the spcified position in the vector.
+    //15) insert(iterator position, const T& value) : Inserts a new element before the specified position in the vector.
     // marks.insert(marks.begin(),50);       //This inserts 50 at the start position of the marks vector.
     // cout<<marks[0]<<endl;                 //Output : 50
 

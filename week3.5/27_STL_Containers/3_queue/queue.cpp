@@ -67,6 +67,10 @@ int main(){
     // queue<int>::iterator it = q.front();          //It gives error
 
     // If we still want to iterate through queue we have to pop all the elements one by one from the front.
-
+    // cout << "Elements (destructive): ";
+    // while (!q.empty()) {
+    //     cout << q.front() << " ";
+    //     q.pop();
+    // }
     return 0;
 }

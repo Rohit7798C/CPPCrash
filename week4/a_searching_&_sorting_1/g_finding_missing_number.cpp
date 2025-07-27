@@ -29,5 +29,31 @@
 // }
 
 
+#include<bits/stdc++.h>
 
+using namespace std;
+
+int findMissingNum(vector<int>&arr){
+    int n = arr.size();
+    int start = 0, end = n-1;
+    int ans = -1;
+    while(start<=end){
+        int mid = start + (end - start)/2;
+        if(arr[mid] == mid + 1){
+            start = mid + 1;
+        }
+        else{
+            ans = arr[mid] - 1;
+            end = mid - 1;
+        }
+    }
+    return ans;
+}
+
+int main(){
+    vector<int>arr = {1,2,3,5,6,7,8};
+    int ans = findMissingNum(arr);
+    cout<<"The Missing number is : "<<ans;
+    return 0;
+}
 

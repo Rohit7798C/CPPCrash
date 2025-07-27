@@ -16,9 +16,9 @@ using namespace std;
 void findFirstOccurence(int arr[],int n,int target,int &ansIndex){
     int start = 0;
     int end = n-1;
-    int mid = start + (end-start)/2;
-
+    
     while(start<=end){
+        int mid = start + (end-start)/2;
         if(arr[mid] == target){
             //ans found -> may or may not be the first occurence.
             //Here we will use "store and conquer" startegy.
@@ -28,16 +28,16 @@ void findFirstOccurence(int arr[],int n,int target,int &ansIndex){
             //Left mein jao
             end = mid - 1;
         }
-        if(target>arr[mid]){
+        else if(target>arr[mid]){
             //right mein jao
             start = mid + 1;
         }
-        if(target<arr[mid]){
+        else{
             //left mein jao
             end = mid - 1; 
         }
         //Yeh mai bhul jata hu
-        mid = start + (end-start)/2;
+        // mid = start + (end-start)/2;
     }
 }
 

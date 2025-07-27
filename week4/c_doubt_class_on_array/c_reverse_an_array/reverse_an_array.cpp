@@ -17,6 +17,16 @@ void rotateArray(vector<int>&arr,int k){
     reverse(arr.begin() + k,arr.end());
 }
 
+//This is Left Rotation (Exact reverse of rotate Right).
+// void rotateArrayleft(vector<int>&arr,int k){
+//     reverse(arr.begin() + k,arr.end());
+//     reverse(arr.begin(),arr.begin() + k);
+//     reverse(arr.begin(),arr.end());
+//     for(int i : arr){
+//         cout<<i<<" ";
+//     }
+// }
+
 int main(){
     vector<int>arr = {1,2,3,4,5,6,7};
     int n = arr.size();

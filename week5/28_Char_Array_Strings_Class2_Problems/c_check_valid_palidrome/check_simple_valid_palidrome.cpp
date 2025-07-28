@@ -7,7 +7,7 @@ bool validPalindrome(string s){
     int start = 0,end = s.length() - 1;
     while(start<=end){
         
-        if(s[start] == s[end]){
+        if(tolower(s[start]) == tolower(s[end])){
             start++;
             end--;
         }

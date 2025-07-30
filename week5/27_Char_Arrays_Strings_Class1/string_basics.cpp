@@ -120,8 +120,8 @@ int main(){
 
     // String compare: 
     // Returns 0 -> If both strings are equal.
-    // Returns <0 -> If one string is Lexographically('a' comes before 'b') smaller than other.
-    // Returns >0 -> If one string is bigger than other.
+    // Returns < 0 -> If one string is Lexographically('a' comes before 'b') smaller than other.
+    // Returns > 0 -> If one string is bigger than other.
     
     // string s1 = "Love";
     // // string s1 = "Love";      //-> Both are equal

@@ -445,7 +445,7 @@ int main(){
     //   1   4    6    4   1
     // 1   5   10   10   5   1
 
-    //Logic : a number is a sum of upper two adjacent numbers, along with 1's at btoh the extremes.
+    //Logic : a number is a sum of upper two adjacent numbers, along with 1's at both the extremes.
     //Pascal's triangle is made with the help of a Binomial Coefficient.
 
         // c = c*(i-j)/j;  formula for finding the number.

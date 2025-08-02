@@ -2,11 +2,11 @@
 using namespace std;
 
 int main(){
-    // int age;
-    // cout<<"Enter the age : "<<endl;
+    int age;
+    cout<<"Enter the age : "<<endl;
 
-    // cin>>age;
-    // cout<<"Your age is : "<<age<<endl;
+    cin>>age;
+    cout<<"Your age is : "<<age<<endl;
 
     // int marks;
     // cout<<"Enter your marks : "<<endl;
@@ -64,4 +64,5 @@ int main(){
 // 3) what is getline(cin,10)?
 // Ans: getline(): This is a function that reads a line of input from a specified input stream.
 //      cin: This represents the standard input stream, which is usually the keyboard.
+
 //      10: This is the maximum number of characters that will be read from the input stream

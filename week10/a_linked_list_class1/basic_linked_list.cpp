@@ -22,9 +22,9 @@ void printValue(Node * head){
 }
 
 int main(){
-    Node * head = new Node (10);
-    Node * second = new Node(20);
-    Node * third = new Node(30);
+    Node * head = new Node (1);
+    Node * second = new Node(2);
+    Node * third = new Node(3);
     
     head -> next = second;
     second -> next =  third;
@@ -32,4 +32,5 @@ int main(){
     cout<<"The created linked list is : ";
     printValue(head);
     return 0;
+
 }

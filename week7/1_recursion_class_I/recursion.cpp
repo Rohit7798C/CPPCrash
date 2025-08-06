@@ -9,7 +9,7 @@
 /*
    
     Recursion
-    5! =5x4x3x2x1, 
+    5! = 5x4x3x2x1, 
     6! = 6x5x4x3x2x1
     9! = 9x8x7x6x5x4x3x2x1 
 
@@ -28,11 +28,11 @@
 
     Power :- 2^n 
     2^3 = 2 * 2 * 2
-    2 ^ 7 = =2x2x2x2x2x2x2
+    2 ^ 7 = 2x2x2x2x2x2x2
     2 ^ 7 = 2 * 2^6
     Ek badi problem, choti problem par dependent hai
 
-    power (7) = 2 *  power(6)
+    power (7) = 2 * power(6)
 
     These relations are called Recurrence or Recursive relations
 
@@ -46,7 +46,7 @@
 
               = 2 * 64
 
-              = 126
+              = 128
 
     - Chotti (recursion) Prob
 
@@ -191,3 +191,4 @@ int main(){
     return 0;
 
 }
+

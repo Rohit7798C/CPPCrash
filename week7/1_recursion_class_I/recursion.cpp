@@ -1,5 +1,5 @@
 //Recursion : Jab ek badi problem, choti problem par dependent ho, tab humein recursion use karna chahiye.
-//Bookish definition : When a function itself directly or indirectly it is called recursion.
+//Bookish definition : When a function calls itself directly or indirectly it is called recursion.
 /* 
    
     Magical line : 1 case hum solve karenge, aur baki recursion sambhal lega.
@@ -189,4 +189,5 @@ int main(){
     //sum upto n
     // cout<<getSum(5);
     return 0;
+
 }

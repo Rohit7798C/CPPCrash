@@ -21,8 +21,9 @@ int main(){
     desk_map[3] = 55;         //desk_map ke 3rd key par, 55 desk number assign kar diya.
 
     desk_map[2] = 54;         //reassign, because key = 2 was already there.
-    //iterate
+    
     
 
     return 0;
+
 }

@@ -44,3 +44,36 @@ int peakIndexInArrayUsingMaxElement(vector<int>&nums){
 //     }
 //     return start;
 // }
+
+
+//Time Complexity : O(logN) (As we are using Binary Search).
+int peakValueIndexInArray(vector<int>&arr){
+    int n = arr.size();
+    int start = 0;
+    int end = n - 1;
+    int mid = start + (end - start)/2;
+    while(start<end){
+        if(arr[mid]<arr[mid+1]){
+            //mai line A par hu
+            // Move right
+            start = mid + 1;
+        }
+        else{
+           //Ya toh mai line B par hu
+           //ya toh mai ans par hi hu
+            end = mid;
+        }
+        mid = start + (end - start)/2;
+    }
+    return end;
+    //We can return either start, end or mid because all are at the same position.
+}
+
+int main(){
+    vector<int>arr = {0,9,10,8,7,6,5,2};
+    // int ans = peakIndexInArrayUsingMaxElement(arr);
+    // int ans = peakIndexInMountainArray(arr);
+    int ans = peakValueIndexInArray(arr);
+    cout<<"The index of peak element is : "<<ans<<endl;
+    return 0;
+}

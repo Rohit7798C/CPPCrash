@@ -1,3 +1,4 @@
+//This is just the basic start of Sorting.
 //Questions on Binary Search
 //VIMP : find the pivot index.
 //Easy version : find the peak.
@@ -77,3 +78,4 @@ int main(){
     cout<<"The index of peak element is : "<<ans<<endl;
     return 0;
 }
+

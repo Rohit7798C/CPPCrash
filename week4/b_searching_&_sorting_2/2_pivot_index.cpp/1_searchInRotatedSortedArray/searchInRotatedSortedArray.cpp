@@ -21,7 +21,7 @@ int pivotIndexFromArray(vector<int>&arr){
         //(50|60|70|10|20|30|40), 50 rotate ho kar aage gaya hai.
         //Toh isiliye 50 hamesha B part ke saare elements se bada rahega.
         //Toh hum B part ke elements ko array ke first element 50 se compare karke pata kar sakte hai ki, humein left jana hai ki right.
-        if(arr[start] > arr[mid]){
+        if(arr[start] > arr[mid]){      //Matlab hum line B par hai.
             end = mid - 1;
         }
         else{
@@ -35,5 +35,6 @@ int main(){
     
     return 0;
 }
+
 
 

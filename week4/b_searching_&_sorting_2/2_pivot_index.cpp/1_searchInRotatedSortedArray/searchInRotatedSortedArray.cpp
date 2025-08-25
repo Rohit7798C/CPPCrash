@@ -1,5 +1,5 @@
 //Finding the pivot element from a Sorted and Rotated Array.
-
+//Further version of finding the peak element.
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -35,6 +35,7 @@ int main(){
     
     return 0;
 }
+
 
 
 

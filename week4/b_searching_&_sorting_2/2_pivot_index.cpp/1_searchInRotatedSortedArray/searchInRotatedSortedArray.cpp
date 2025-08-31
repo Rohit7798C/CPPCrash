@@ -34,8 +34,10 @@ int pivotIndexFromArray(vector<int>&arr){
 int main(){
     vector<int>arr = {9,8,7,10,3,2,1};
     int ans = pivotIndexFromArray(arr);
+    cout<<"The pivot index is : "<<ans<<endl;
     return 0;
 }
+
 
 
 

@@ -29,6 +29,7 @@ int pivotIndexFromArray(vector<int>&arr){
             start = mid;
         }
     }
+    return -1;
 }
 
 int main(){
@@ -37,6 +38,7 @@ int main(){
     cout<<"The pivot index is : "<<ans<<endl;
     return 0;
 }
+
 
 
 

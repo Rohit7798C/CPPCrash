@@ -22,7 +22,6 @@ using namespace std;
 
 class functorOne{
     public : 
-        
         bool operator()(int a,int b){            //overloading the rounded bracket operator.
             //descending order mein compare karna chahate hain
             // if a>b -> true, it means 'a' should be placed before 'b'.

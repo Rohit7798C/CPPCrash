@@ -21,6 +21,13 @@ int minimizeTheDiff(vector<vector<int>>&mat, int target){
 }
 
 int main(){
-    
+    vector<vector<int>>arr = {
+        {1,2,3},
+        {4,5,6},
+        {7,8,9},
+    }
+    int target = 6;
+    int ans = minimizeTheDiff(arr,target);
+    cout<<"The minimum difference is : "<<ans<<endl;
     return 0;
 }

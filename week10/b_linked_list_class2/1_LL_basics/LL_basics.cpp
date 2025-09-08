@@ -289,5 +289,8 @@ int main(){
 
 
 
+//*** ALL ABOVE CODE IS FOR SINGLY LINKED LIST ONLY ***//
+//*** NEXT WILL BE DOUBLY LINKED LIST ***//
+
 
 

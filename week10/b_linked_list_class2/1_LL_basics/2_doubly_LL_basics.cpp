@@ -17,6 +17,15 @@ class Node{
         this -> prev = NULL;
         this -> next = NULL;
     }
+
+    ~Node(){
+        int value = this -> data;
+        if(next != NULL){
+            delete next;
+            next = NULL;
+        }
+        cout<<"Memory free for node with data : "<<value<<endl;
+    }
 };
 
 //traversing a linked list
@@ -88,6 +97,7 @@ void insertAtTail(Node * &tail, Node * &head, int value){
     }
 }
 
+//inserting at given Position
 void insertAtPosition(Node * &head, Node * &tail, int position, int value){
     //inserting at the start
     if(position == 1){
@@ -119,6 +129,41 @@ void insertAtPosition(Node * &head, Node * &tail, int position, int value){
     temp -> next = nodeToInsert;
 }
 
+void deletionInDLL(Node * &head, Node * &tail, int position){
+    //Delete first or start Node
+    if(position == 1){
+        //Creating a temp Node to traverse
+        Node * temp = head;
+        
+        temp -> next -> prev = NULL;
+
+        //Moving the head to new head
+        head = temp -> next;
+        
+        //making the next of original head NULL
+        temp -> next = NULL;
+
+        //Memory Free by deleting the original head
+        delete temp;
+    }
+    else{
+        //Deleting any Middle Node or Last Node
+        Node * prev = NULL;
+        Node * current = head;
+
+        int count = 1;
+        while(count<position){
+            prev = current;
+            current = current -> next;
+            count++;
+        }
+        current -> prev = NULL;
+        prev -> next = current -> next;
+        current -> next = NULL;
+        delete current;
+    }
+}
+
 int main(){
     // Node * node1 = new Node(10);
     // Node * head = node1;
@@ -137,10 +182,10 @@ int main(){
     print(head);
     insertAtHead(head,tail, 30);
     print(head);
-    insertAtHead(head,tail, 40);
-    print(head);
-    insertAtHead(head,tail, 50);
-    print(head);
+    // insertAtHead(head,tail, 40);
+    // print(head);
+    // insertAtHead(head,tail, 50);
+    // print(head);
 
     //inserting at tail
     insertAtTail(tail,head, 5);
@@ -154,7 +199,19 @@ int main(){
     // insertAtPosition(head, tail, 1, 101);
     // print(head);
 
-    insertAtPosition(head, tail, 7, 102);
+    insertAtPosition(head, tail, 5, 102);
+    print(head);
+
+    //Deleting First Node
+    deletionInDLL(head, tail, 1);
+    print(head);
+
+    //Deleting Last Node
+    deletionInDLL(head, tail, 4);
+    print(head);
+
+    //Deleting Middle Node
+    deletionInDLL(head, tail, 2);
     print(head);
 
     cout<<head -> data<<" "<<endl;

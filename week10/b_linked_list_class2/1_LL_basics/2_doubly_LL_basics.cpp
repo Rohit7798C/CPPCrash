@@ -129,6 +129,7 @@ void insertAtPosition(Node * &head, Node * &tail, int position, int value){
     temp -> next = nodeToInsert;
 }
 
+//Deletion in Doubly Linked List
 void deletionInDLL(Node * &head, Node * &tail, int position){
     //Delete first or start Node
     if(position == 1){
@@ -221,3 +222,4 @@ int main(){
     cout<<"The length of the Linked List is : "<<len<<endl;
     return 0;
 }
+

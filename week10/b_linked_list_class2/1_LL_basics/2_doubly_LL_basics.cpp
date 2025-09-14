@@ -1,7 +1,7 @@
 //Doubly Linked List
 // 1) Insertion : start, middle, end
 // 2) Traverse
-// 3) Deletion
+// 3) Deletion : start, middle, end
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -222,4 +222,5 @@ int main(){
     cout<<"The length of the Linked List is : "<<len<<endl;
     return 0;
 }
+
 

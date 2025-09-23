@@ -12,6 +12,7 @@ class Node{
     Node * prev;
     Node * next;
 
+    //Node Constructor
     Node(int data){
         this -> data = data;
         this -> prev = NULL;
@@ -222,6 +223,7 @@ int main(){
     cout<<"The length of the Linked List is : "<<len<<endl;
     return 0;
 }
+
 
 
 
